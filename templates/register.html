@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Register | TurfEasy{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="/static/css/auth.css">
+{% endblock %}
+
+{% block content %}
+<div class="auth-card">
+    <h2>Create Account</h2>
+
+    <form id="register-form">
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
+{% endblock %}

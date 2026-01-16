@@ -1,0 +1,131 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #22c55e;
+    --primary-dark: #15803d;
+    --primary-soft: #dcfce7;
+
+    --secondary: #0f172a;
+    --text-main: #334155;
+    --text-light: #64748b;
+
+    --bg-body: #f0fdf4;
+    --bg-card: #ffffff;
+
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
+
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-full: 999px;
+
+    --nav-height: 80px;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+.hidden { display: none; }
+
+/* Utilities */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.flex { display: flex; }
+.justify-between { justify-content: space-between; }
+.items-center { align-items: center; }
+.text-center { text-align: center; }
+.text-primary { color: var(--primary); }
+
+/* Glass */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+.glass-card {
+    background: rgba(255,255,255,0.85);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    transition: 0.3s;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Navbar */
+.navbar {
+    height: var(--nav-height);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+}
+
+.logo span { color: var(--secondary); }
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 28px;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff;
+}
+
+.btn-outline {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+/* Footer */
+footer {
+    background: var(--secondary);
+    color: white;
+    padding: 60px 0;
+    margin-top: 60px;
+}

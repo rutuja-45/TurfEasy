@@ -1,0 +1,36 @@
+.turf-card {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.turf-card:hover {
+    transform: translateY(-6px);
+}
+
+.badge {
+    padding: 6px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    background: var(--primary-soft);
+    color: var(--primary-dark);
+}
+
+/* Booking slots */
+.time-slot {
+    border: 1px solid var(--primary);
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.time-slot.active {
+    background: var(--primary);
+    color: white;
+}
+
+.time-slot.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
